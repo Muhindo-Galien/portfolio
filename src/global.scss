@@ -1,0 +1,23 @@
+$mainColor: #00917C;
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content
+    }
+};
+$widthi: 768px;
+@mixin ipad {
+    @media (width: #{$widthi}) {
+        @content
+    }
+}
+
+$widthiphone: 320px;
+
+@mixin iphone5 {
+    @media (width: #{$widthiphone}) {
+        @content
+    }
+}

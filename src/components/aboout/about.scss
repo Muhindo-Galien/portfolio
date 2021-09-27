@@ -1,0 +1,91 @@
+@import "../../global.scss";
+.about {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: wrap;
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        @include mobile {
+            font-size: 25px;
+        }
+    }
+    p{
+        margin-top: 10px;
+        color: lightgrey;
+        font-size: 20px;
+        padding-right: 40px;
+         @include mobile {
+        font-size: 18px;
+
+         }
+        
+
+    }
+    h2{
+        margin-bottom: 10px;
+        color: $mainColor;
+    }
+    
+    .wrapper{
+        display: flex;
+        align-items: flex-start;
+        width: 70%;
+        @include mobile {
+            flex-direction: column;
+            width: 90%;
+        }
+    .left{
+       overflow: hidden;
+       flex: 0.5;
+       width: 70vw;
+       @include mobile {
+           margin-bottom: 20px;
+       width: 100vw;
+
+       }
+    }
+
+    .right{
+        overflow: hidden;
+        flex: 0.5;
+        width: 70%;
+         @include mobile {
+             width: 100%;
+         }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-wrap: wrap;
+
+            
+
+            span {
+                width: auto;
+                height: auto;
+                border-radius: 7px;
+                color: $mainColor;
+                margin: 10px 10px 10px 0px;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #ffffff;
+                border:  1px solid $mainColor;
+                font-weight: 500;
+                @include mobile {
+                padding: 4px;
+                margin: 5px 5px 5px 0px;
+                }
+            }
+        }
+        
+    }
+    }
+   
+}
