@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {useParams, Link } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import { data } from "../../data";
 
 import "./single.scss";
@@ -9,7 +9,7 @@ export default function Single() {
   const [portfoliodata, setPortfoliodata]= useState([]);
   
   useEffect(()=>{
-        const specific = data.filter((item)=>item.id == id);
+        const specific = data.filter((item)=>item.id === id);
         setPortfoliodata(specific);
         console.log(portfoliodata);
     },[id])

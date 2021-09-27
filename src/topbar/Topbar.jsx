@@ -1,5 +1,4 @@
 import './topbar.scss'
-import { Link } from 'react-router-dom';
 export default function Topbar({isOpen, setIsOpen}){
     return (
         

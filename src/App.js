@@ -2,19 +2,14 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  
 } from "react-router-dom";
-import Intro from "./components/intro/Intro";
-import Portofolio from "./components/portofolio/Portofolio";
 import Topbar from "./topbar/Topbar";
 import './app.scss';
-import { Contact } from "./contact/Contact";
 import { useState } from "react";
 import Menu from "./components/menu/Menu";
 import { data } from "./data";
-import { About } from "./components/aboout/About";
 import Single from "./components/single/Single";
-import Social from "./components/social/Social";
 import Home from "./pages/Home";
 
 const allcategories = ['All',...new Set(data.map((item)=>
