@@ -1,18 +1,10 @@
-import { useEffect, useState } from 'react';
 import {useParams} from 'react-router-dom';
-import { data } from "../../data";
-
 import "./single.scss";
 
 export default function Single() {
     const {id}=useParams();
-  const [portfoliodata, setPortfoliodata]= useState([]);
-  
-  useEffect(()=>{
-        const specific = data.filter((item)=>item.id === id);
-        setPortfoliodata(specific);
-        console.log(portfoliodata);
-    },[id])
+    console.log(id);
+
     return (
         <div className="single">
             <div className="titleDetails">
