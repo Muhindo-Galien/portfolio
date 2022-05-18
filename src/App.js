@@ -11,6 +11,9 @@ import Menu from "./components/menu/Menu";
 import { data } from "./data";
 import Single from "./components/single/Single";
 import Home from "./pages/Home";
+import { About } from "./components/aboout/About";
+import { Contact } from "./contact/Contact";
+import Portofolio from "./components/portofolio/Portofolio";
 
 const allcategories = ['All',...new Set(data.map((item)=>
 item.category))]
@@ -35,17 +38,23 @@ function App() {
     <Menu isOpen= {isOpen} setIsOpen = {setIsOpen}/>
       <Switch>
           <Route exact path="/">
-            <Home 
-
-            portfoliodata={portfoliodata}
-            categories={categories} 
-            filterItems={filterItems} />
+            <Home portfoliodata={portfoliodata}
+            categories={categories} filterItems={filterItems}/>
           </Route>
-          <Route path="/projects/:id">
+          <Route 
+          portfoliodata={portfoliodata}
+          path="/projects/:id">
             <Single/>
           </Route>
-          <Route path="/">
-            <Single/>
+          <Route path='/about'>
+            <About/>
+          </Route>
+          <Route path="/contact">
+            <Contact/>
+          </Route>
+          <Route path="/portfolio">
+            <Portofolio portfoliodata={portfoliodata}
+            categories={categories} filterItems={filterItems} />
           </Route>
       </Switch>
     

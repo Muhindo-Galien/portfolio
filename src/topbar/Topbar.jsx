@@ -1,12 +1,16 @@
 import './topbar.scss'
+import logo from "../assets/elie_logo.png"
+import { Link } from 'react-router-dom'
 export default function Topbar({isOpen, setIsOpen}){
     return (
         
         <div className={isOpen? "topbar active":"topbar"}>
             <div className='wrapper'>
                 <div className='left'>
+                    <Link to='/'>
+                        <a href="/#intro" className="logo"><img src={logo} alt="logo" /></a>
+                    </Link>
                 
-                    <a href="/#intro" className="logo">M G</a>
                 </div>
                 
             
@@ -14,17 +18,30 @@ export default function Topbar({isOpen, setIsOpen}){
                     <div className="navlinks">
                         <ul>
                             <li onClick={()=>setIsOpen(false)}>
-                            <a href="#intro">Home</a>
+                            <Link to='/'>
+                                <a href="#intro">Home</a>
+                            </Link>
                             </li>
+
+                            
+
                             <li onClick={()=>setIsOpen(false)}>
-                            <a href="#about">About</a>
+                                <Link to='/about'>
+                                    <a href="#about">About</a>
+                                </Link>
                             </li>
+
+                            
                             <li onClick={()=>setIsOpen(false)}>
-                            <a href="#portfolio">Projects</a>
+                                <Link to='/portfolio'>
+                                    <a>Projects</a>
+                                </Link>
                             </li>   
 
                             <li onClick={()=>setIsOpen(false)}>
-                            <a href="#contact">Contact</a>
+                                <Link to='/contact'>
+                                    <a>Contact</a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

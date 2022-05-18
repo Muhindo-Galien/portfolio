@@ -1,6 +1,6 @@
 import  './intro.scss';
-import { FaGithub,FaTwitter,FaLinkedinIn } from 'react-icons/fa';
 import Social from '../social/Social';
+import elie from "../../assets/elie.png"
 
 
 export default function Intro() {
@@ -9,16 +9,16 @@ export default function Intro() {
 
             <div className="left">
                 <div className="imgContainer">
-                    <img src="assets/galien.png" alt="" />
+                    <img src={elie} alt="elie_image" />
                 </div>
             </div>
         <div className="right">
 
            <div className="wrapper">
                <h3>Hi there, I'm</h3>
-               <h1>Muhindo Galien</h1>
+               <h1>Elie Kinahwa</h1>
                <h2>
-                a web developer
+                 A Flutter Developer
                </h2>
                
                <Social/>

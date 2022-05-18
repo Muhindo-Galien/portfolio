@@ -1,19 +1,20 @@
 import {useParams} from 'react-router-dom';
 import "./single.scss";
+import { data } from "../../data";
+import { FaGithub } from 'react-icons/fa';
 
 export default function Single() {
     const {id}=useParams();
-    console.log(id);
+    const item = data.filter((item)=> item.id == id);
+    // console.log(item);
+
 
     return (
         <div className="single">
             <div className="titleDetails">
 
-                <h1>title</h1>
-                <p> This page contains the case study of Boreal Coffee
-                 Clone Website which includes 
-                the Project Overview, Tools Used and Live Links to
-                 the official product.</p>
+                <h1>{item[0].title}</h1>
+                <p> {item[0].content}</p>
             </div>
             <div className="tools">
             <div className="wrapper">
@@ -21,8 +22,8 @@ export default function Single() {
                 
                 <div className="left">
                     <div className="item" >
-                        <img src="assets/shake.svg" alt="" />
-                        <button><a href="#lo">Try it</a></button>
+                        <img src={item[0].img} alt="" />
+                        <button><a href={item[0].linkGit} target="_blank" rel="noreferrer"><FaGithub/></a></button>
                     </div>
                 
 
@@ -32,17 +33,7 @@ export default function Single() {
                 <div className="right">
                     <h2>Tools Used</h2>
                 <div className="container">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-                    <span>SASS</span>
-                    <span>GIT</span>
-                    <span>Github</span>
-                    <span>Responsive Design</span>
-                    <span>Terminal</span>
-                    <span>Express Basics</span>
-                    <span>SQL Basics</span>
+                {item[0].tools.map((item)=><span>{item}</span>)}
 
                 </div>
                 </div>

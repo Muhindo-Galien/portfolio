@@ -5,10 +5,8 @@ import  './portofolio.scss'
 
 
 export default function Portofolio({portfoliodata, categories,filterItems}) {
+ 
    
-    
-    
-
     return (
         <div className="portfolio" id='portfolio'>
             <h1>Projects</h1>

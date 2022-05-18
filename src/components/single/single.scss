@@ -7,7 +7,15 @@
     justify-content: center;
     align-items: center;
     margin-top: 70px;
-    
+    margin: auto;    
+width: 68%;
+@include mobile {
+    margin: 0;
+    width: auto;
+    margin-top: 5rem;
+}
+
+
     .titleDetails{
         background-color: $mainColor;
         display: flex;

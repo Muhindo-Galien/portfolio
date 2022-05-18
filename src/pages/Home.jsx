@@ -5,7 +5,7 @@ import Portofolio from '../components/portofolio/Portofolio'
 import { Contact } from '../contact/Contact'
 
 
-export default function Home({portfoliodata,categories,filterItems}) {
+export default function Home({portfoliodata, categories,filterItems}) {
     return (
         <>
           <div className="app">
@@ -13,7 +13,8 @@ export default function Home({portfoliodata,categories,filterItems}) {
       <div className="sections">
         <Intro/>
         <About/>
-        <Portofolio portfoliodata={portfoliodata} categories={categories} filterItems={filterItems}/>
+        <Portofolio portfoliodata={portfoliodata}
+            categories={categories} filterItems={filterItems}/>
         <Contact/>
       </div>
       

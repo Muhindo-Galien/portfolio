@@ -9,21 +9,26 @@
     transition: all 1s ease;
     z-index: 3;
     overflow: hidden;
-    
     .wrapper {
-        padding: 10px 30px;
+        padding: 10px 240px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        @include mobile {
+            padding: 10px 30px;
+            
+        }
         .left{
             .logo{
-            font-size: 30px;
+            width: 30px;
             font-weight: 700;
             text-decoration: none;
             color: inherit;
             
-            
+         img{
+             width: 45px;
+             object-fit: cover;
+         }   
         }
         }
         .right{

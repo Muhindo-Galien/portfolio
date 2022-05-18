@@ -7,76 +7,102 @@
   @include mobile {
     flex-direction: column;
   }
-
-  .left {
-    flex: 1;
-    overflow: hidden;
-
-    img {
-      height: 100%;
-    }
+  *:focus {
+    outline: 0;
   }
-  .right {
-    flex: 1;
+
+  .wrapper {
+    overflow-y: hidden !important;
+    margin: 100px auto 0;
+    width: 90%;
+    max-width: 1000px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-
-    h2 {
-      font-size: 30px;
-    }
-
-    form {
-      width: 70%;
-      height: 70%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-
-      input {
-        width: 300px;
-        height: 30px;
-        font-size: 14px;
-
-        @include mobile {
-          width: 200px;
-          height: 25px;
-        }
-      }
-
-      textarea {
-        width: 300px;
-        height: 200px;
-        font-size: 14px;
-
-        @include mobile {
-          width: 200px;
-          height: 100px;
-        }
-      }
-
-      button {
-        width: 150px;
-        height: 40px;
-        color: white;
-        padding:10px;
-        overflow: hidden;
-        background-color: $mainColor;
-        border: none;
-        border-radius: 10px;
-        font-weight: 500;
-        cursor: pointer;
-
-        &:focus {
-          outline: none;
-        }
-      }
-
-      span {
-        color: green;
-      }
-    }
   }
+  
+  form {
+    overflow: hidden !important;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+  }
+  
+  form * {
+    font-size: 20px;
+    letter-spacing: 0.075em;
+    font-weight: 300;
+    // text-transform: uppercase;
+    text-transform: lowercase;
+
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  form .field {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  form .field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $mainColor;
+    width: 100%;
+    height: 64px;
+    transition: width 333ms ease-in-out;
+    text-align: center;
+    padding: 18px 0;
+    
+  }
+  
+  form .field input[type="text"],
+  form .field textarea {
+    border: none;
+    width: 100%;
+    height: 64px;
+    margin: 0;
+    padding-left: 19.5%;
+    color: #313a3d;
+  }
+  form .field{
+    color: white !important;
+    text-transform: capitalize !important;
+  }
+  form #msg {
+    height: 64px;
+    resize: none;
+    transition: all 333ms ease-in-out;
+    padding-top: 18px;
+  }
+  form textarea:focus#msg,
+  form textarea:not(:placeholder-shown)#msg {
+    height: 166px;
+  }
+  form input[type="text"]:focus + label,
+  form input[type="text"]:not(:placeholder-shown) + label,
+  form textarea:focus + label,
+  form textarea:not(:placeholder-shown) + label,
+  form .field:hover label {
+    width: 18%;
+  }
+  form input[type="submit"] {
+    background: $mainColor;
+    -webkit-appearance: none;
+    border: none;
+    position: relative;
+    padding: 13px 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  form input[type="submit"]:hover,
+  form input[type="submit"]:focus {
+    background: #006E7F;  
+  }
+  
+
+
+
+  
 }

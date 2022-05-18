@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const PortfolioMenu = ({portfoliodata}) => {
-    
+
     return (
         <div className="container">
         {
-            portfoliodata.map((item)=>{
+            portfoliodata && portfoliodata.map((item)=>{
                 const {id,title,img} = item;
                 return (
                     <Link to={`/projects/${id}`}>
